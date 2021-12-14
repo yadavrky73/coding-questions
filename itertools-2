@@ -1,0 +1,18 @@
+from itertools import product
+a=[1,2]
+b=[3,4]
+prod=product(a,b,repeat=3)
+print(list(prod))
+
+#2
+from itertools import permutations
+a=[1,2,3]
+arr=permutations(a)
+print(list(arr))
+
+#3
+from itertools import accumulate
+a=[1,2,5,3,4]
+import operator
+acc=accumulate(a,max)
+print(list(acc))
