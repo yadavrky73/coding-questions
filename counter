@@ -1,0 +1,35 @@
+from collections import Counter
+for i in range(int(input())):
+    str1=input()
+    str2=input()
+    k=int(input())
+    c=0
+    if len(str1)!=len(str2):
+        print(False)
+    elif sum((Counter(str1)-Counter(str2)).values())>k:
+        print(False)
+    else:
+        print(True)
+output:-
+1
+asdf
+fghj
+2
+False
+#2
+from collections import Counter
+for i in range(int(input())):
+    s=input()
+    n=len(s)
+    if n%2!=0:
+        print('-1')
+    else:
+        s1=Counter(s[:n//2])
+        s2=Counter(s[n//2:])
+        print(dict(s1),s2)
+output:-
+2
+asdfasdf
+{'a': 1, 's': 1, 'd': 1, 'f': 1} Counter({'a': 1, 's': 1, 'd': 1, 'f': 1})
+asdfghjkl;;asdfs
+{'a': 1, 's': 1, 'd': 1, 'f': 1, 'g': 1, 'h': 1, 'j': 1, 'k': 1} Counter({';': 2, 's': 2, 'l': 1, 'a': 1, 'd': 1, 'f': 1})
