@@ -1,0 +1,6 @@
+from itertools import combinations
+n=int(input())
+arr=input().split()
+k=int(input())
+ar=tuple(combinations(arr,k))
+print(ar)
