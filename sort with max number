@@ -1,0 +1,3 @@
+for i in  range(int(input())):
+    a=list(map(int,input().split()))
+    print(sorted(a,key=a.count,reverse=True))
