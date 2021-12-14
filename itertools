@@ -36,4 +36,9 @@ for k in l:
         s+=j*j
     mn=max(mn,s)
 print(mn)
-    
+output:-
+3 1000
+2 5 4
+3 7 8 9
+5 5 7 8 9 10
+206
