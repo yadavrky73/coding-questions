@@ -1,0 +1,22 @@
+def decor(num):
+    def inner():
+        b=num()
+        multi=b*10
+        return multi
+    return inner
+def decor1(num):
+    def inner():
+        a=num()
+        add=a*10
+        return add
+    return inner
+def decor1(num):
+    def inner():
+        a=num()
+        add=a**2
+        return add
+    return inner
+def num():
+    return 5
+re=decor1(decor(num))
+print(re())
