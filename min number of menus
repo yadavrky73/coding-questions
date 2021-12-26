@@ -1,0 +1,14 @@
+for i in range(int(input())):
+    a=int(input())
+    ar=[2048,1024,512,256,128,64,32,16,8,4,2,1]
+    aa=0
+    bb=0
+    while(bb<13):
+        aa+=a//ar[bb]
+        a=a%ar[bb]
+        if a==0:
+            break
+        bb+=1
+    print(aa)
+    
+    
