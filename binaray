@@ -1,0 +1,17 @@
+import math
+n=int(input())
+c=0
+s=0
+while(n!=0):
+    if (n and (n-1))!=0:
+        n=n>>1
+        s+=1
+    else:
+        c=math.sqrt(n)
+        n=n-c
+        s+=1
+if(s%2==0):
+    print('YES')
+else:
+    print('NO')
+    
