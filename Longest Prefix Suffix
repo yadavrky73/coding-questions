@@ -1,0 +1,14 @@
+class Solution:
+	def lps(self, s):
+		# code here
+		a=""
+		b=""
+		n=len(s)
+		c=0
+		for i in range(len(s)-1):
+		    a+=str(s[i])
+		    b=str(s[n-i-1])+b
+		    if a==b:
+		        c=max(c,len(a))
+		    
+		return c
