@@ -1,0 +1,15 @@
+def countRev (s):
+    # your code here
+    a=0
+    b=0
+    if len(s)%2!=0:
+        return -1
+    for i in range(len(s)):
+        if s[i]=='{':
+            a+=1
+        else:
+            a-=1
+        if a<0:
+            b+=1
+            a=1
+    return b+a//2
