@@ -1,0 +1,27 @@
+class Solution:
+    
+    def findNum(self, n : int):
+        # Complete this function
+        if (n==1):
+            return 5
+        i=0
+        j=5*n
+        
+        while(i<=j):
+            m=i+(j-i)//2
+            if (self.check(m,n)):
+                
+                j=m-1
+            else:
+                i=m+1
+        return i
+        
+        
+    def check(self,m,n):
+        c=0
+        f=5
+        while(f<=m):
+            c+=m//f
+            f=f*5
+        return (c>=n)
+            
