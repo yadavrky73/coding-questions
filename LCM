@@ -1,0 +1,25 @@
+lcm of given aaray 
+print("Hello world")
+def arlcm(n1,n2):
+    if(n1>n2):
+        num=n1
+        d=n2
+    else:
+        num=n2
+        d=n1
+    rem=num%d
+    while(rem!=0):
+        num=d
+        d=rem
+        rem=num%d
+    gcd=d
+    lcm=int(int(n1*n2)/int(gcd))
+    return lcm
+arr1=list(map(int,input().split()))
+arr2=list(map(int,input().split()))
+n1=arr1[0]
+n2=arr2[0]
+lcm=arlcm(n1,n2)
+#for i in range(2,len(arr)):
+#    lcm=arlcm(lcm,arr[i])
+print(lcm)
